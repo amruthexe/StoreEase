@@ -1,4 +1,4 @@
-import { Button, Col, Flex, Modal, Row } from 'antd';
+import { Button, Flex, Modal} from 'antd';
 import { ChangeEvent, useEffect, useState } from 'react';
 import toastMessage from '../../lib/toastMessage';
 import { useUpdateProductMutation } from '../../redux/features/management/productApi';
@@ -74,27 +74,6 @@ const EditModal = () => {
             defaultValue={updateDate?.price}
             name='price'
           />
-          <Row>
-            <Col span={6}>
-              <label htmlFor='Size' className='label'>
-                Size
-              </label>
-            </Col>
-            <Col span={18}>
-              <select
-                name='size'
-                defaultValue={updateDate?.size}
-                value={updateDate?.size}
-                onChange={handleChange}
-                className={`input-field`}
-              >
-                <option value=''>Select Product Size*</option>
-                <option value='SMALL'>Small</option>
-                <option value='MEDIUM'>Medium</option>
-                <option value='LARGE'>Large</option>
-              </select>
-            </Col>
-          </Row>
           <Flex justify='center' style={{ margin: '1rem' }}>
             <Button key='submit' type='primary' onClick={onSubmit}>
               Update

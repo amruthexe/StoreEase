@@ -88,8 +88,7 @@ const AddStockModal = () => {
             defaultValue={updateDate?.stock}
           />
           <Row>
-            <Col span={6}>
-            </Col>
+            <Col span={6}></Col>
           </Row>
           <Flex justify='center' style={{ margin: '1rem' }}>
             <Button key='submit' type='primary' onClick={onSubmit}>
