@@ -93,19 +93,6 @@ const AddStockModal = () => {
                 Size
               </label>
             </Col>
-            <Col span={18}>
-              <select
-                defaultValue={updateDate?.size}
-                value={updateDate?.size}
-                onChange={handleChange}
-                className={`input-field`}
-              >
-                <option value=''>Select Product Size*</option>
-                <option value='SMALL'>Small</option>
-                <option value='MEDIUM'>Medium</option>
-                <option value='LARGE'>Large</option>
-              </select>
-            </Col>
           </Row>
           <Flex justify='center' style={{ margin: '1rem' }}>
             <Button key='submit' type='primary' onClick={onSubmit}>
