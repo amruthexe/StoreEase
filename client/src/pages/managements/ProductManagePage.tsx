@@ -43,7 +43,6 @@ const ProductManagePage = () => {
     seller: product?.seller,
     sellerName: product?.seller?.name || 'DELETED SELLER',
     brand: product.brand,
-    size: product.units,
     description: product.description,
   }));
 
@@ -294,7 +293,6 @@ const UpdateProductModal = ({ product }: { product: IProduct & { key: string } }
       category: product.category._id,
       brand: product.brand?._id,
       description: product.description,
-      size: product.units,
     },
   });
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -414,21 +412,6 @@ const UpdateProductModal = ({ product }: { product: IProduct & { key: string } }
 
           <CustomInput label='Description' name='description' register={register} />
 
-          <Row>
-            <Col xs={{ span: 23 }} lg={{ span: 6 }}>
-              <label htmlFor='Size' className='label'>
-                Size
-              </label>
-            </Col>
-            <Col xs={{ span: 23 }} lg={{ span: 18 }}>
-              <select className={`input-field`} {...register('size')}>
-                <option value=''>Select Product Size</option>
-                <option value='SMALL'>Small</option>
-                <option value='MEDIUM'>Medium</option>
-                <option value='LARGE'>Large</option>
-              </select>
-            </Col>
-          </Row>
           <Flex justify='center'>
             <Button
               htmlType='submit'
