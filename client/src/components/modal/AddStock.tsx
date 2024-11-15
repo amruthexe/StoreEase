@@ -89,9 +89,6 @@ const AddStockModal = () => {
           />
           <Row>
             <Col span={6}>
-              <label htmlFor='Size' className='label'>
-                Size
-              </label>
             </Col>
           </Row>
           <Flex justify='center' style={{ margin: '1rem' }}>
