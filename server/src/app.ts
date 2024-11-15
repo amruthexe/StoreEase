@@ -12,16 +12,8 @@ app.use(express.json());
 app.use(morgan('dev'));
 
 // CORS configuration for production
-app.use(
-  cors({
-    origin: [
-      'https://store-ease-w2i4.vercel.app', // Frontend domain in production
-    ],
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'], // Allowed HTTP methods
-    allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
-    credentials: true, // Allow credentials if needed
-  })
-);
+app.use(cors()); // This will allow all origins
+
 
 // Routes and middleware
 app.use('/api/v1', rootRouter);
